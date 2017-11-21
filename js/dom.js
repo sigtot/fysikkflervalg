@@ -33,10 +33,6 @@ function showProblemViewer(){
     problemViewer.css("display", "block");
 }
 
-function hideProblemViewer(){
-    problemViewer.css("display", "none");
-}
-
 function hideAnswerViewer(){
     answerViewer.css("display", "none");
 }
@@ -45,6 +41,7 @@ function displayProblem(problem){
     imageContainer.empty();
     alternativesContainer.empty();
     infoContainer.empty();
+    alternativeButtons = [];
 
     // Display image
     var image = $("<img>").attr("src", imageFolderPath + problem.problemFileName);
@@ -64,7 +61,7 @@ function displayProblem(problem){
             if(!isCorrectAnswer){
                 alternativeButtons[thisButton.data("alternative")].addClass("wrong-answer-button");
             }
-                alternativeButtons[problem.answer].addClass("correct-answer-button");
+            alternativeButtons[problem.answer].addClass("correct-answer-button");
 
             // Answer needs to be submitted. We can use isCorrectAnswer to add crazy congratulatory effects later maybe
             displayAnswer(problem);
@@ -91,5 +88,11 @@ function displayAnswer(problem){
     } else {
         button.text("Neste oppgave");
     }
+
+    button.click(function(){
+        hideAnswerViewer();
+        displayProblem(session.getCurrentProblem());
+    });
+
     answerViewer.append(button);
 }

@@ -43,8 +43,8 @@ var problems = [
         category: mekanikk,
     },
     {
-        problemFileName: "mekfys_2006_1.png",
-        answerFileName: "mekfys_2006_1_LF.png",
+        problemFileName: "mekfys_2006_2.png",
+        answerFileName: "mekfys_2006_2_LF.png",
         originExam: MEKFYS_FALL_2006,
         answer: B,
         numberOfAlternatives: 5,
