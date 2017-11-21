@@ -29,6 +29,10 @@ const FALL_2006 = new Exam("Høst 2006", new Date("2006-12-08"), mekfys);
 
 const exams = [FALL_2006];
 
+// Categories
+const mekanikk = "Mekanikk";
+const termo = "Termodynamikk";
+
 var problems = [
     {
         problemFileName: "2006_1.png",
@@ -36,5 +40,6 @@ var problems = [
         originExam: FALL_2006,
         answer: D,
         numberOfAlternatives: 5,
+        category: mekanikk,
     },
 ];
