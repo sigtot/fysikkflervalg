@@ -31,7 +31,7 @@ const exams = [MEKFYS_FALL_2006];
 
 // Categories
 const mekanikk = "Mekanikk";
-const termo = "Termodynamikk";
+const termo = "Termisk fysikk";
 
 var problems = [
     {
@@ -47,6 +47,62 @@ var problems = [
         answerFileName: "mekfys_2006_2_LF.png",
         originExam: MEKFYS_FALL_2006,
         answer: B,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2006_3.png",
+        answerFileName: "mekfys_2006_3_LF.png",
+        originExam: MEKFYS_FALL_2006,
+        answer: A,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2006_4.png",
+        answerFileName: "mekfys_2006_4_LF.png",
+        originExam: MEKFYS_FALL_2006,
+        answer: B,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2006_5.png",
+        answerFileName: "mekfys_2006_5_LF.png",
+        originExam: MEKFYS_FALL_2006,
+        answer: C,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2006_6.png",
+        answerFileName: "mekfys_2006_6_LF.png",
+        originExam: MEKFYS_FALL_2006,
+        answer: C,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2006_7.png",
+        answerFileName: "mekfys_2006_7_LF.png",
+        originExam: MEKFYS_FALL_2006,
+        answer: E,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2006_8.png",
+        answerFileName: "mekfys_2006_8_LF.png",
+        originExam: MEKFYS_FALL_2006,
+        answer: D,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2006_9.png",
+        answerFileName: "mekfys_2006_9_LF.png",
+        originExam: MEKFYS_FALL_2006,
+        answer: E,
         numberOfAlternatives: 5,
         category: mekanikk,
     },
