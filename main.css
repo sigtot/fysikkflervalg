@@ -27,3 +27,21 @@
     color:#333;
     font-weight:lighter;
 }
+
+.correct-answer-button{
+    background-image: none !important;
+    background:#4caf50 !important;
+}
+
+.wrong-answer-button{
+    background-image: none !important;
+    background:#f44336 !important;
+}
+
+.medium-margins{
+    margin: 5px;
+}
+
+#alternatives-container button{
+    outline:none !important;
+}

@@ -8,12 +8,21 @@ PracticeSession.prototype.getCurrentProblem = function(){
   return this.problems[this.currentProblemNumber];
 };
 
+PracticeSession.prototype.isFinished = function(){
+    return this.currentProblemNumber === this.problems.length; // Should be one more than the last index
+};
+
 PracticeSession.prototype.submitAnswer = function(answer){
+    if(this.isFinished()) {
+        throw new Error("Can't submit answers to a finished practiceSession");
+    }
     var correctAnswer = this.getCurrentProblem().answer === answer;
     if(correctAnswer){
         this.score++;
     }
+
     this.currentProblemNumber++;
+
     return correctAnswer;
 };
 
