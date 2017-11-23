@@ -62,8 +62,10 @@ function displayProblem(problem){
                 alternativeButtons[thisButton.data("alternative")].addClass("wrong-answer-button");
             }
             alternativeButtons[problem.answer].addClass("correct-answer-button");
+            for (var i = 0; i < alternativeButtons.length; i++){
+                alternativeButtons[i].addClass("no-interact");
+            }
 
-            // Answer needs to be submitted. We can use isCorrectAnswer to add crazy congratulatory effects later maybe
             displayAnswer(problem);
         });
         alternativesContainer.append(alternativeButton);
