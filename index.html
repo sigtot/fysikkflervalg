@@ -22,32 +22,34 @@
 
         <br>
 
-        <div id="session-settings">
-            <form id="session-settings-form">
-                <div class="form-group text-center">
-                    <label class="session-settings-text" for="number-of-problems-input">
-                        Jeg vil løse
-                        <input id="number-of-problems-input" class="form.control number-of-problems-input" type="number" min="1">
-                        oppgaver &nbsp
-                    </label>
+        <div class="main-wrapper">
+            <div id="session-settings">
+                <form id="session-settings-form">
+                    <div class="form-group text-center">
+                        <label class="session-settings-text" for="number-of-problems-input">
+                            Jeg vil løse
+                            <input id="number-of-problems-input" class="form.control number-of-problems-input" type="number" min="1">
+                            oppgaver &nbsp
+                        </label>
 
-                    <button class="btn btn-success btn-lg">Start øvingen</button>
-                </div>
-            </form>
+                        <button class="btn btn-success btn-lg">Start øvingen</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="problem-viewer" style="display: none" class="text-center">
+                <div id="image-container"></div>
+                <div id="alternatives-container"></div>
+                <div id="info-container"></div>
+            </div>
+            <div id="answer-viewer" style="display: none" class="text-center">
+            </div>
+
+
+            <footer class="footer navbar-fixed-bottom">
+                <p>Laget av <a href="http://folk.ntnu.no/sigurdvt">Sigurd Totland</a></p>
+            </footer>
         </div>
-
-        <div id="problem-viewer" style="display: none">
-            <div id="image-container"></div>
-            <div id="alternatives-container"></div>
-            <div id="info-container"></div>
-        </div>
-        <div id="answer-viewer" style="display: none">
-        </div>
-
-
-        <footer class="footer navbar-fixed-bottom">
-            <p>Laget av <a href="http://folk.ntnu.no/sigurdvt">Sigurd Totland</a></p>
-        </footer>
 		<script src="js/problems.js" type="text/javascript"></script>
         <script src="js/parameters.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>

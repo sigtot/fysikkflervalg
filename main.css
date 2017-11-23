@@ -45,3 +45,15 @@
 #alternatives-container button{
     outline:none !important;
 }
+
+.no-interact{
+    pointer-events:none;
+}
+
+#image-container img, #answer-viewer img{
+    max-width:100%;
+}
+
+.main-wrapper{
+    width:100%;
+}
