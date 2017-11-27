@@ -2,6 +2,7 @@ const defaultSessionSize = 50;
 
 // Jquery elements
 var numberOfProblemsInput = $("#number-of-problems-input");
+var skipCompletedProblemsInput = $("#skip-completed-problems-input");
 var imageContainer = $("#image-container");
 var alternativesContainer = $("#alternatives-container");
 var infoContainer = $("#info-container");
@@ -21,7 +22,9 @@ $("#session-settings-form").submit(function( event ) {
     hideSessionSettings();
     showProblemViewer();
 
-    session = new PracticeSession(numberOfProblemsInput.val(), true);
+    console.log(skipCompletedProblemsInput.is(":checked"));
+
+    session = new PracticeSession(numberOfProblemsInput.val(), skipCompletedProblemsInput.is(":checked"));
     displayProblem(session.getCurrentProblem());
 });
 
