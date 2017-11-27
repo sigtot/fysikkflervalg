@@ -36,10 +36,6 @@ PracticeSession.prototype.submitAnswer = function(answer){
     return correctAnswer;
 };
 
-/*
- Maybe rewrite this to let us specify category later
- And exclude previously done problems
-*/
 function getRandomProblems(numberOfProblems, skipCompletedProblems){
     var numberOfAvailableProblems = problems.length;
 
@@ -60,6 +56,14 @@ function getRandomProblems(numberOfProblems, skipCompletedProblems){
     }
 
     return chosenProblems;
+}
+
+function getNumberOfUnfinishedProblems(){
+    var numberOfUnfinishedProblems = 0;
+    for(var i = 0; i < problems.length; i++){
+        if(localStorage.getItem(problems[i].problemFileName) !== "done") numberOfUnfinishedProblems++;
+    }
+    return numberOfUnfinishedProblems;
 }
 
 function getRandomElementsFromArray(arr, n, skipCompletedProblems) {

@@ -11,8 +11,18 @@ var sessionSettingsElement = $("#session-settings");
 var problemViewer = $("#problem-viewer");
 var alternativeButtons = [];
 
-numberOfProblemsInput.val(Math.min(defaultSessionSize,problems.length));
-numberOfProblemsInput.attr("max", problems.length);
+function updateNumberOfProblemsInput(){
+    var skipCompletedProblems = skipCompletedProblemsInput.is(":checked");
+    var max = skipCompletedProblems ? getNumberOfUnfinishedProblems() : problems.length;
+    numberOfProblemsInput.val(Math.min(defaultSessionSize, max));
+    numberOfProblemsInput.attr("max", max);
+}
+
+updateNumberOfProblemsInput();
+
+skipCompletedProblemsInput.change(function(){
+    updateNumberOfProblemsInput();
+});
 
 var session;
 
