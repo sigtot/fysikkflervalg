@@ -1,7 +1,13 @@
-function PracticeSession(numberOfProblems){
+var localStorage = window.localStorage;
+if(!localStorage.getItem("numberOfCompletedProblems")){
+    localStorage.setItem("numberOfCompletedProblems", 0);
+}
+
+function PracticeSession(numberOfProblems, skipCompletedProblems){
     this.score = 0;
-    this.problems = getRandomProblems(numberOfProblems);
+    this.problems = getRandomProblems(numberOfProblems, skipCompletedProblems);
     this.currentProblemNumber = 0;
+    this.skipCompletedProblems = skipCompletedProblems;
 }
 
 PracticeSession.prototype.getCurrentProblem = function(){
@@ -19,6 +25,10 @@ PracticeSession.prototype.submitAnswer = function(answer){
     var correctAnswer = this.getCurrentProblem().answer === answer;
     if(correctAnswer){
         this.score++;
+        localStorage.setItem(this.getCurrentProblem().problemFileName, "done");
+        localStorage.setItem("numberOfCompletedProblems", localStorage)
+    }else{
+        localStorage.setItem(this.getCurrentProblem().problemFileName, "failed");
     }
 
     this.currentProblemNumber++;
@@ -30,11 +40,29 @@ PracticeSession.prototype.submitAnswer = function(answer){
  Maybe rewrite this to let us specify category later
  And exclude previously done problems
 */
-function getRandomProblems(numberOfProblems){
-    return getRandomElementsFromArray(problems, numberOfProblems);
+function getRandomProblems(numberOfProblems, skipCompletedProblems){
+    var numberOfAvailableProblems = problems.length;
+
+    // Create array to put problems in
+    var chosenProblems = [];
+
+    // Create shuffled array of the ints from 0 to numberOfAvailableProblems
+    var indexesToTry = [];
+    for(var i = 0; i < numberOfAvailableProblems; i++){
+        indexesToTry.push(i);
+    }
+    shuffleArray(indexesToTry);
+
+    for(var i = 0; i < numberOfAvailableProblems && chosenProblems.length < numberOfProblems; i++){
+        var problem = problems[indexesToTry[i]];
+        var problemIsCompleted = localStorage.getItem(problem.problemFileName) === "done";
+        if(!problemIsCompleted || !skipCompletedProblems) chosenProblems.push(problem);
+    }
+
+    return chosenProblems;
 }
 
-function getRandomElementsFromArray(arr, n) {
+function getRandomElementsFromArray(arr, n, skipCompletedProblems) {
     var result = new Array(n),
         len = arr.length,
         taken = new Array(len);
@@ -46,4 +74,13 @@ function getRandomElementsFromArray(arr, n) {
         taken[x] = --len;
     }
     return result;
+}
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 }

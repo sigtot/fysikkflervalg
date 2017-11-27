@@ -21,7 +21,7 @@ $("#session-settings-form").submit(function( event ) {
     hideSessionSettings();
     showProblemViewer();
 
-    session = new PracticeSession(numberOfProblemsInput.val());
+    session = new PracticeSession(numberOfProblemsInput.val(), true);
     displayProblem(session.getCurrentProblem());
 });
 
