@@ -26,8 +26,12 @@ const subjects = [mekfys, tfy4115];
 
 // Exams
 const MEKFYS_FALL_2006 = new Exam("Høst 2006", new Date("2006-12-08"), mekfys);
+const MEKFYS_FALL_2007 = new Exam("Høst 2007", new Date("2007-12-11"), mekfys);
 
-const exams = [MEKFYS_FALL_2006];
+const exams = [
+    MEKFYS_FALL_2006,
+    MEKFYS_FALL_2007,
+];
 
 // Categories
 const mekanikk = "Mekanikk";
@@ -103,6 +107,86 @@ var problems = [
         answerFileName: "mekfys_2006_9_LF.png",
         originExam: MEKFYS_FALL_2006,
         answer: E,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2007_1.png",
+        answerFileName: "mekfys_2007_1_LF.png",
+        originExam: MEKFYS_FALL_2007,
+        answer: B,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2007_2.png",
+        answerFileName: "mekfys_2007_2_LF.png",
+        originExam: MEKFYS_FALL_2007,
+        answer: E,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2007_3.png",
+        answerFileName: "mekfys_2007_3_LF.png",
+        originExam: MEKFYS_FALL_2007,
+        answer: A,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2007_4.png",
+        answerFileName: "mekfys_2007_4_LF.png",
+        originExam: MEKFYS_FALL_2007,
+        answer: C,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2007_5.png",
+        answerFileName: "mekfys_2007_5_LF.png",
+        originExam: MEKFYS_FALL_2007,
+        answer: C,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2007_6.png",
+        answerFileName: "mekfys_2007_6_LF.png",
+        originExam: MEKFYS_FALL_2007,
+        answer: D,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2007_7.png",
+        answerFileName: "mekfys_2007_7_LF.png",
+        originExam: MEKFYS_FALL_2007,
+        answer: B,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2007_8.png",
+        answerFileName: "mekfys_2007_8_LF.png",
+        originExam: MEKFYS_FALL_2007,
+        answer: C,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2007_9.png",
+        answerFileName: "mekfys_2007_9_LF.png",
+        originExam: MEKFYS_FALL_2007,
+        answer: A,
+        numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2007_10.png",
+        answerFileName: "mekfys_2007_10_LF.png",
+        originExam: MEKFYS_FALL_2007,
+        answer: B,
         numberOfAlternatives: 5,
         category: mekanikk,
     },
