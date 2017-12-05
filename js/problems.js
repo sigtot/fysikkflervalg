@@ -30,6 +30,8 @@ const MEKFYS_FALL_2007 = new Exam("Høst 2007", new Date("2007-12-11"), mekfys);
 const MEKFYS_FALL_2008 = new Exam("Høst 2008", new Date("2008-12-11"), mekfys);
 const MEKFYS_FALL_2009 = new Exam("Høst 2009", new Date("2009-12-18"), mekfys);
 const MEKFYS_FALL_2010 = new Exam("Høst 2009", new Date("2010-12-16"), mekfys);
+const MEKFYS_FALL_2011 = new Exam("Høst 2009", new Date("2011-12-16"), mekfys);
+const MEKFYS_FALL_2012 = new Exam("Høst 2009", new Date("2011-12-18"), mekfys);
 
 const exams = [
     MEKFYS_FALL_2006,
@@ -37,6 +39,8 @@ const exams = [
     MEKFYS_FALL_2008,
     MEKFYS_FALL_2009,
     MEKFYS_FALL_2010,
+    MEKFYS_FALL_2011,
+    MEKFYS_FALL_2012,
 ];
 
 // Categories
@@ -458,6 +462,94 @@ var problems = [
         originExam: MEKFYS_FALL_2010,
         answer: A,
         numberOfAlternatives: 5,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2011_1.png",
+        answerFileName: "mekfys_2011_1_LF.png",
+        originExam: MEKFYS_FALL_2011,
+        answer: B,
+        numberOfAlternatives: 4,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2011_2.png",
+        answerFileName: "mekfys_2011_2_LF.png",
+        originExam: MEKFYS_FALL_2011,
+        answer: C,
+        numberOfAlternatives: 4,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2011_3.png",
+        answerFileName: "mekfys_2011_3_LF.png",
+        originExam: MEKFYS_FALL_2011,
+        answer: D,
+        numberOfAlternatives: 4,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2011_4.png",
+        answerFileName: "mekfys_2011_4_LF.png",
+        originExam: MEKFYS_FALL_2011,
+        answer: C,
+        numberOfAlternatives: 4,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2011_5.png",
+        answerFileName: "mekfys_2011_5_LF.png",
+        originExam: MEKFYS_FALL_2011,
+        answer: B,
+        numberOfAlternatives: 4,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2011_6.png",
+        answerFileName: "mekfys_2011_6_LF.png",
+        originExam: MEKFYS_FALL_2011,
+        answer: D,
+        numberOfAlternatives: 4,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2012_1.png",
+        answerFileName: "mekfys_2012_1_LF.png",
+        originExam: MEKFYS_FALL_2012,
+        answer: A,
+        numberOfAlternatives: 4,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2012_2.png",
+        answerFileName: "mekfys_2012_2_LF.png",
+        originExam: MEKFYS_FALL_2012,
+        answer: C,
+        numberOfAlternatives: 4,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2012_3.png",
+        answerFileName: "mekfys_2012_3_LF.png",
+        originExam: MEKFYS_FALL_2012,
+        answer: A,
+        numberOfAlternatives: 4,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2012_4.png",
+        answerFileName: "mekfys_2012_4_LF.png",
+        originExam: MEKFYS_FALL_2012,
+        answer: D,
+        numberOfAlternatives: 4,
+        category: mekanikk,
+    },
+    {
+        problemFileName: "mekfys_2012_5.png",
+        answerFileName: "mekfys_2012_5_LF.png",
+        originExam: MEKFYS_FALL_2012,
+        answer: C,
+        numberOfAlternatives: 4,
         category: mekanikk,
     },
 ];
