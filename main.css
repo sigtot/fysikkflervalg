@@ -20,6 +20,11 @@
 
 .footer{
     padding:10px 100px 10px 100px;
+    pointer-events:none;
+}
+
+.footer a{
+    pointer-events:all;
 }
 
 .session-settings-text{
